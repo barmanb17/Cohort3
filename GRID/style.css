@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 10% 60% 30%;
+    grid-template-columns: 25% 25% 50%;
+
+    grid-template-areas:
+    "header header header"
+    "left left right"
+    "left1 left2 right" 
+    ;
+}
+
+.header{
+    background-color: aqua;
+    grid-area: header;
+                        
+}
+.left{
+    background-color: blue;
+    grid-area: left;
+}
+.right{
+    background-color: blueviolet;   
+    grid-area: right;
+}
+.left1{
+    background-color: aquamarine;
+    grid-area: left1;
+}
+.left2{
+    background-color: crimson;
+    grid-area: left2;
+}
+
+
