@@ -1,0 +1,14 @@
+:root{
+    --king: red;
+    --queen: green;
+    --pad-btn:10px 20px;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
