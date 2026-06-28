@@ -144,3 +144,23 @@
 // }
 
 
+// function party(name, age) {
+    
+//     if(age>=18){
+//         console.log("You are most welcome in party...", name)
+//     } else {
+//         console.log("You cant enter in party...", name)
+//     }
+// }
+// party("bijoy", 12)
+
+// var c0 = (b,c,d)=> console.log("Hello gguys", b) //for multiple arguements
+// var c1 = a => console.log("hello guys", a); //for one arguement
+
+// c1("bjoy")
+
+// //iife- immediately invoked function expression
+
+// (function(){
+//     console.log('This is IIFE')
+// })()
