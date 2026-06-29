@@ -164,3 +164,108 @@
 // (function(){
 //     console.log('This is IIFE')
 // })()
+
+
+//push- last mein add
+//pop-last main remove
+//unshift-first main add
+//shift- first main remove
+
+//difference in execution- push/and pop runs fast than unshift and shift 
+
+//for each 
+//  var brr = [10, 20, 30]
+
+//  brr.forEach(function(elem, idx){
+//     console.log(elem, idx);
+//  })
+
+
+// var arr = [10, 20, 30, 40]
+
+// var ans =arr.reduce(function(acc, val){
+//     return acc+val;
+// },0)
+// console.log(ans)
+
+//objects
+
+
+
+
+
+
+//js phase 2 questions
+
+//Create a function named greet that prints "Hello World".
+
+function greet() {
+    console.log("Hello World");
+}
+
+//Create a function add(a, b) that returns the sum.
+
+function add(a, b){
+    return (a+b);
+}
+console.log(add(1,2));
+
+//Write a function to calculate the square of a number.
+
+function square(a){
+    return a*a;
+}
+
+console.log(square(2));
+
+//Create a function that checks whether a number is even or odd.
+
+function check(a){
+    return(a % 2 == 0 ? "Even" : "Odd")
+}
+
+console.log(check(2));
+
+//Write a function that converts Celsius to Fahrenheit.
+
+function convert(a){
+    return a * 1.8 + 32;
+}
+
+console.log(convert(2));
+
+//Create a function with default parameter "Guest".
+
+function Hotel(a = "Guest"){
+    return a;
+}
+console.log(Hotel()); 
+
+//Write a function that returns the greater of two numbers.
+
+function greater(a, b){
+    return a > b ? a : b;
+
+}
+console.log(greater(2,3));
+
+//Create a function to calculate area of rectangle.
+
+function area(w, l){
+    return w * l;
+}
+console.log(area(2, 4));
+
+//Write a function that returns "Adult" if age ≥ 18 else "Minor".
+
+function age(a){
+    return a >=18 ? "Adult" : "Minor";
+}
+console.log(age(19));
+
+//Create a function to reverse a string.
+
+function reverse(str){
+    return str.split("").reverse().join("");
+}
+console.log(reverse("Honey"));
