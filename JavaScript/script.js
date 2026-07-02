@@ -269,3 +269,10 @@ function reverse(str){
     return str.split("").reverse().join("");
 }
 console.log(reverse("Honey"));
+
+//Write a function expression for multiplication.
+
+let multiply = function(a, b){
+    return a * b;
+}
+console.log(multiply(2,3));
