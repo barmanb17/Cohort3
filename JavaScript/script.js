@@ -100,7 +100,7 @@
 // do {
 //     x++;
 //     console.log(x);
-    
+
 // } while (x < 5);
 
 // let count = 0;
@@ -145,7 +145,7 @@
 
 
 // function party(name, age) {
-    
+
 //     if(age>=18){
 //         console.log("You are most welcome in party...", name)
 //     } else {
@@ -199,80 +199,212 @@
 
 //Create a function named greet that prints "Hello World".
 
-function greet() {
-    console.log("Hello World");
+// function greet() {
+//     console.log("Hello World");
+// }
+
+// //Create a function add(a, b) that returns the sum.
+
+// function add(a, b){
+//     return (a+b);
+// }
+// console.log(add(1,2));
+
+// //Write a function to calculate the square of a number.
+
+// function square(a){
+//     return a*a;
+// }
+
+// console.log(square(2));
+
+// //Create a function that checks whether a number is even or odd.
+
+// function check(a){
+//     return(a % 2 == 0 ? "Even" : "Odd")
+// }
+
+// console.log(check(2));
+
+// //Write a function that converts Celsius to Fahrenheit.
+
+// function convert(a){
+//     return a * 1.8 + 32;
+// }
+
+// console.log(convert(2));
+
+// //Create a function with default parameter "Guest".
+
+// function Hotel(a = "Guest"){
+//     return a;
+// }
+// console.log(Hotel()); 
+
+// //Write a function that returns the greater of two numbers.
+
+// function greater(a, b){
+//     return a > b ? a : b;
+
+// }
+// console.log(greater(2,3));
+
+// //Create a function to calculate area of rectangle.
+
+// function area(w, l){
+//     return w * l;
+// }
+// console.log(area(2, 4));
+
+// //Write a function that returns "Adult" if age ≥ 18 else "Minor".
+
+// function age(a){
+//     return a >=18 ? "Adult" : "Minor";
+// }
+// console.log(age(19));
+
+// //Create a function to reverse a string.
+
+// function reverse(str){
+//     return str.split("").reverse().join("");
+// }
+// console.log(reverse("Honey"));
+
+// //Write a function expression for multiplication.
+
+// let multiply = function(a, b){
+//     return a * b;
+// }
+// console.log(multiply(2,3));
+
+
+//OOPS
+//construction function- har word ka pehla word CAPITAL
+
+// function CreateSongs() {
+//     this.songName = "Cry for me",
+//     this.albumName = "Hurry up tomorrow",
+//     this.singer = 'Weekend',
+//     this.duration = 3.5,
+//     this.isLiked = true
+// }
+
+// let song1 = new CreateSongs();
+// console.log(song1)
+
+// function CreateBook(bookName, author, pages) {
+//     this.bookName = bookName;
+//     this.authorName = author;
+//     this.page = pages
+//     this.getFrontPage= function(){
+//         console.log('Book Name:', this.bookName)
+//         console.log('Author Name:', this.authorName)
+//         console.log('Pages:',this.page)
+
+//     }
+// }
+
+// let book1 = new CreateBook("talha anjum", "pakistan", 343)
+// console.log(book1)
+// console.log(book1.getFrontPage())
+
+
+// function MakeStudents(fname, lname, contact, isVerified){
+//     this.fname = fname;
+//     this.lname = lname;
+//     this.contact = contact;
+//     this.isVerified = isVerified;
+//     this.showprofile = function(){
+//         console.log("Student Name:", this.fname, this.lname);
+//         console.log("Contact:", this.contact);
+//         console.log("Verifiedj?:", this.isVerified);
+//     }
+// }
+
+// let student1 = new MakeStudents("abhishek", "msihra", 9999999999, true );
+// // console.log(student1)
+
+// console.log(student1.showprofile());
+
+
+
+
+
+
+
+
+//using class for es6
+
+class MakeStudents {
+    constructor(fname, lname, contact, isVerified) {
+        this.fname = fname;
+        this.lname = lname;
+        this.contact = contact;
+        this.isVerified = isVerified;
+
+    }
+
 }
 
-//Create a function add(a, b) that returns the sum.
-
-function add(a, b){
-    return (a+b);
-}
-console.log(add(1,2));
-
-//Write a function to calculate the square of a number.
-
-function square(a){
-    return a*a;
-}
-
-console.log(square(2));
-
-//Create a function that checks whether a number is even or odd.
-
-function check(a){
-    return(a % 2 == 0 ? "Even" : "Odd")
+class Teacher extends MakeStudents{
+    constructor(fname, lname, contact, isVerified, accessTeacherPanel){
+        super(fname, lname, contact, isVerified)
+    }
+    addCourse(){
+        console.log('New Courses Added');
+    }
+    removeAllCourses(){
+        console.log('All courses Removed');
+    }
 }
 
-console.log(check(2));
 
-//Write a function that converts Celsius to Fahrenheit.
 
-function convert(a){
-    return a * 1.8 + 32;
+let showprofile = function () {
+    if (this.isVerified) {
+        console.log(`Name: ${this.fname} ${this.lname}, Contact: ${this.contact}`)
+     
+    } else {
+        console.log("User not found");
+    }
 }
 
-console.log(convert(2));
+MakeStudents.prototype.showprofile = showprofile;
 
-//Create a function with default parameter "Guest".
+let s1 = new MakeStudents("Bijoy", "Barman", 8783737489, true);
 
-function Hotel(a = "Guest"){
-    return a;
-}
-console.log(Hotel()); 
+let a1 = new Teacher("Rita", "Barman", 8987987323, true, "Teacher")
 
-//Write a function that returns the greater of two numbers.
+s1.showprofile()
+a1.removeAllCourses()
 
-function greater(a, b){
-    return a > b ? a : b;
 
-}
-console.log(greater(2,3));
 
-//Create a function to calculate area of rectangle.
 
-function area(w, l){
-    return w * l;
-}
-console.log(area(2, 4));
 
-//Write a function that returns "Adult" if age ≥ 18 else "Minor".
+///prototyping inheritance
 
-function age(a){
-    return a >=18 ? "Adult" : "Minor";
-}
-console.log(age(19));
 
-//Create a function to reverse a string.
+// let dada = {
+//     fname: 'gr',
+//     lname: 'dfd',
+//     land: '100acres',
+// }
 
-function reverse(str){
-    return str.split("").reverse().join("");
-}
-console.log(reverse("Honey"));
+// let papa = {
+//     fname: 'Rakesh',
+//     lname: 'Barman',
+//     shop: 'Vegetable Shop',
+// }
 
-//Write a function expression for multiplication.
+// let beta = {
+//     fname: 'Bijoy',
+//     lname: 'Barman',
 
-let multiply = function(a, b){
-    return a * b;
-}
-console.log(multiply(2,3));
+// }
+
+// beta.__proto__ = papa;
+// papa.__proto__ = dada;
+
+// console.log(beta.land);
+
