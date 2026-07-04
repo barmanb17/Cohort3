@@ -335,48 +335,48 @@
 
 //using class for es6
 
-class MakeStudents {
-    constructor(fname, lname, contact, isVerified) {
-        this.fname = fname;
-        this.lname = lname;
-        this.contact = contact;
-        this.isVerified = isVerified;
+// class MakeStudents {
+//     constructor(fname, lname, contact, isVerified) {
+//         this.fname = fname;
+//         this.lname = lname;
+//         this.contact = contact;
+//         this.isVerified = isVerified;
 
-    }
+//     }
 
-}
+// }
 
-class Teacher extends MakeStudents{
-    constructor(fname, lname, contact, isVerified, accessTeacherPanel){
-        super(fname, lname, contact, isVerified)
-    }
-    addCourse(){
-        console.log('New Courses Added');
-    }
-    removeAllCourses(){
-        console.log('All courses Removed');
-    }
-}
+// class Teacher extends MakeStudents{
+//     constructor(fname, lname, contact, isVerified, accessTeacherPanel){
+//         super(fname, lname, contact, isVerified)
+//     }
+//     addCourse(){
+//         console.log('New Courses Added');
+//     }
+//     removeAllCourses(){
+//         console.log('All courses Removed');
+//     }
+// }
 
 
 
-let showprofile = function () {
-    if (this.isVerified) {
-        console.log(`Name: ${this.fname} ${this.lname}, Contact: ${this.contact}`)
+// let showprofile = function () {
+//     if (this.isVerified) {
+//         console.log(`Name: ${this.fname} ${this.lname}, Contact: ${this.contact}`)
      
-    } else {
-        console.log("User not found");
-    }
-}
+//     } else {
+//         console.log("User not found");
+//     }
+// }
 
-MakeStudents.prototype.showprofile = showprofile;
+// MakeStudents.prototype.showprofile = showprofile;
 
-let s1 = new MakeStudents("Bijoy", "Barman", 8783737489, true);
+// let s1 = new MakeStudents("Bijoy", "Barman", 8783737489, true);
 
-let a1 = new Teacher("Rita", "Barman", 8987987323, true, "Teacher")
+// let a1 = new Teacher("Rita", "Barman", 8987987323, true, "Teacher")
 
-s1.showprofile()
-a1.removeAllCourses()
+// s1.showprofile()
+// a1.removeAllCourses()
 
 
 
@@ -408,3 +408,182 @@ a1.removeAllCourses()
 
 // console.log(beta.land);
 
+
+
+
+
+
+// function showThis(){
+//     console.log(this);
+// }
+// showThis()
+
+// 'use strict'
+// function showThis(){
+//     console.log(this)
+// }
+// showThis()
+
+
+// const user = {
+//     name: "Bijoy",
+//     print: function hello(){
+//         console.log("Hello", this.name)
+//     }
+// }
+
+// user.print()
+
+// let namePrint = user.print;
+
+// namePrint();
+
+
+
+// const person = {
+//     name: "Bijoy",
+//     greet() {
+//         console.log(this.name);
+//     }
+// };
+
+// const x = person.greet;
+
+// person.greet();
+// x();
+
+
+
+// const user  = {
+//     name: "Bijoy",
+//     greet(){
+//         console.log("hello", this.name);
+//     }
+// }
+// user.greet();
+// const greetUser = user.greet;
+// greetUser();
+
+
+
+
+// const user = {
+//     name: "Rahul",
+//     regular(){
+//         console.log(this.name);
+//     },
+//     arrow: ()=>{
+//         console.log(this.name);
+//     }
+// }
+
+// user.regular();
+// user.arrow();
+
+
+// const user = {
+//     name: "Rahul",
+//     hobbies: ["Coding", "Gaming", "Reading"],
+//     userHobbies(){
+//         this.hobbies.forEach((hobby)=>{
+//             console.log(`${this.name} likes ${hobby}`)
+//         })
+//     }
+// };
+
+// user.userHobbies()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//private fields
+
+// class BankAccount {
+//     #balance =0;
+
+
+
+//     deposit(amount){
+//         if(amount > 0 ) {
+//             this.#balance +=amount;
+//             console.log(`Deopsited ${amount}`);
+//         } else {
+//             console.log("Deposit amount must be greater than 0")
+//         }
+//     }
+
+//     withdraw(amount){
+//         if(amount <= 0){
+//             console.log("Withdrawal amount must be greater than 0")
+//         } else if (amount > this.#balance){
+//             console.log("Insufficient Balance")
+//         } else {
+//             this.#balance -= amount;
+//             console.log(`Withdrawn ${amount}`)
+//         }
+//     }
+
+//     getBalance(){
+//         return this.#balance;
+//     }
+// }
+
+// const account = new BankAccount();
+
+// account.deposit(0)
+// account.withdraw(200)
+
+// console.log("Current Balance:", account.getBalance());
+
+
+// class Test {
+//     #marks = 0;
+
+//     setMarks(mark){
+//         if(mark > 0) {
+//             this.#marks +=mark;
+//             console.log("marks stored:", this.#marks)
+//         } else {
+//             console.log("Input a valid mark")
+//         }
+//     }
+
+//     getMarks(){
+//         return this.#marks
+//     }
+// }
+
+// const marks = new Test();
+
+// marks.setMarks(30)
+// console.log(marks.getMarks())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//promises
