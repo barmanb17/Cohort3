@@ -363,7 +363,7 @@
 // let showprofile = function () {
 //     if (this.isVerified) {
 //         console.log(`Name: ${this.fname} ${this.lname}, Contact: ${this.contact}`)
-     
+
 //     } else {
 //         console.log("User not found");
 //     }
@@ -585,7 +585,7 @@
 
 
 
- 
+
 //promises
 
 
@@ -597,84 +597,261 @@
 // dataLa();
 
 
-let p1 = new Promise(function(resolve, reject){
-    
-    console.log("Promise pending hain....");
+// let p1 = new Promise(function(resolve, reject){
 
-    let result = true;
+//     console.log("Promise pending hain....");
 
-    setTimeout(() => {
-        if(result){
-            console.log('value true')
-            resolve()
-        } else {
-            console.log('value false')
-            reject()
-        }
-    }, 3000);
-})
+//     let result = true;
 
-
-p1.then(function(){
-    console.log('Promise is fulfilled')
-})
-
-.catch(function(){
-    console.log('Promise is rejected')
-})
-
-.finally(function(){
-    console.log('Promise end')
-})
+//     setTimeout(() => {
+//         if(result){
+//             console.log('value true')
+//             resolve()
+//         } else {
+//             console.log('value false')
+//             reject()
+//         }
+//     }, 3000);
+// })
 
 
+// p1.then(function(){
+//     console.log('Promise is fulfilled')
+// })
 
-function orderFood(){
+// .catch(function(){
+//     console.log('Promise is rejected')
+// })
 
-    let myOrder = new Promise(function(resolve, reject){
-
-        console.log("your order is coming");
-
-        let orderStatus = true;
+// .finally(function(){
+//     console.log('Promise end')
+// })
 
 
-        setTimeout(() => {
-            if(orderStatus){
-                console.log('Delivery partner is arrived')
-                resolve()
-            } else {
-                console.log('condition false hain')
-                reject()
-            }
-        }, 1000);
-    })
 
-    myOrder.then(function(){
-        console.log("make payment")
-        
-        let paymentStatus = false;
+// function orderFood(){
 
-        setTimeout(() => {
-            if(paymentStatus){
-                console.log("Payment done");
-                
-            } else {
-                console.log("Payment failed")
-                
-            }
-        }, 1000);
-    })
-    .then(function(){
-        console.log('Enjoy your food')
-    })
+//     let myOrder = new Promise(function(resolve, reject){
 
-    .catch(function(){
-        console.log("Order failed, make a complaint ")
-    })
+//         console.log("your order is coming");
 
-}
+//         let orderStatus = true;
 
-orderFood()
+
+//         setTimeout(() => {
+//             if(orderStatus){
+//                 console.log('Delivery partner is arrived')
+//                 resolve()
+//             } else {
+//                 console.log('condition false hain')
+//                 reject()
+//             }
+//         }, 1000);
+//     })
+
+//     myOrder.then(function(){
+//         console.log("make payment")
+
+//         let paymentStatus = false;
+
+//         setTimeout(() => {
+//             if(paymentStatus){
+//                 console.log("Payment done");
+
+//             } else {
+//                 console.log("Payment failed")
+
+//             }
+//         }, 1000);
+//     })
+//     .then(function(){
+//         console.log('Enjoy your food')
+//     })
+
+//     .catch(function(){
+//         console.log("Order failed, make a complaint ")
+//     })
+
+// }
+
+// orderFood()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//oops pracitce
+
+// function introduce(){
+//     console.log(this.name);
+// }
+
+// const person = {
+//     name: "Ritik"
+// }
+
+// introduce.call(person);
+// introduce()
+
+
+// function introduce(city, country) {
+//     console.log(`${this.name} from ${city} ${country}`);
+// }
+
+// const person = {
+//     name: "Ritik"
+// }
+
+// introduce.apply(person, ["Bhopal", "india"])
+
+
+// const user = {
+//     name: "Ritik",
+//     greet(){
+//         console.log(this.name);
+//     }
+// };
+
+// // user.greet()
+
+// const fn = user.greet.bind(user);
+// fn()
+
+
+// const animal = {
+//     eats: true,
+// };
+
+// const dog = Object.create(animal)
+// console.log(dog.eats)
+
+
+
+// function Person(name) {
+//     this.name = name;
+// }
+
+// Person.prototype.greet = function(){
+//     console.log(`Hello ${this.name}`)
+// }
+
+// let person1 = new Person("Bijoy");
+
+// person1.greet()
+
+
+// function Person(name) {
+//     this.name = name;
+// }
+
+
+// Person.prototype.greet = function(){
+//     console.log(`Hello ${this.name}`)
+// }
+
+// let person1 = new Person("Anurag");
+
+// person1(this.name)
+
+
+// class Student{
+//     constructor(name, marks){
+//         this.name = name;
+//         this.marks = marks;
+
+//     }
+
+//     getGrade(){
+//         if(this.marks >= 90){
+//             return "A"
+//         } else if(this.marks >= 75) {
+//             return "B"
+//         } else if(this.marks >= 60) {
+//             return "C"
+//         } else {
+//             return "Failed"
+//         }
+//     }
+// }
+
+// const student1 = new Student("Bijoy", 98)
+// console.log(student1.getGrade())
+
+
+
+// class Employee {
+//     constructor(name, salary) {
+//         this.name = name;
+//         this.salary = salary;
+
+//     }
+//     work() {
+//         console.log(`${this.name} is working and his salary is ${this.salary}`)
+//     }
+// }
+
+// class Developer extends Employee {
+//     constructor(name, salary) {
+//         super(name, salary)
+//     }
+//     code(){
+//         console.log(`${this.name} is coding`)
+//     }
+// }
+
+// const dev = new Developer("Bijoy", 20000)
+
+// dev.work()
+// dev.code()
+
+
+
+
+// class BankAccount {
+//     #balance = 0;
+//     constructor(amount){
+//         this.#balance = amount
+//     }
+//     deposit(amount){
+//         if(amount >= 0){
+//             this.#balance += amount
+//             console.log("deposited")
+//         }
+//     }
+//     withdraw(amount){
+//         if(amount>0){
+//             this.#balance -= amount
+//         } else {
+//             console.log('Insufficient balance')
+//         }
+//     }
+//     getBalance(){
+//         return this.#balance;
+//     }
+// }
+
+// let a1 = new BankAccount(2000)
+// a1.deposit(400)
+// a1.withdraw(10880)
+
+// console.log(a1.getBalance()) 
+
 
 
 
