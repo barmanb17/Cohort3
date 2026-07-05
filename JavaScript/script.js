@@ -855,3 +855,50 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+//async practice
+
+// function greet(name,surname){
+//     console.log("Hello", name,surname)
+// }
+
+// setTimeout(greet, 2000, 'ritik','rajput')
+
+
+// const timer = setTimeout(() => {
+//     console.log('print')
+    
+// }, 5000);
+
+// clearTimeout(timer)
+
+
+
+let count = 5
+ const int = setInterval(() => {
+    console.log(count)
+    count--
+    if(count == 0){
+    clearInterval(int)
+
+        console.log("done")
+    }
+
+
+}, 1000);
+
+
+
+
+
+
