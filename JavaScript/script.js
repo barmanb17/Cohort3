@@ -585,5 +585,96 @@
 
 
 
-
+ 
 //promises
+
+
+// async function dataLa() {
+//     let response = await fetch('https://picsum.photos/v2/list')
+//     console.log(response)
+// }
+
+// dataLa();
+
+
+let p1 = new Promise(function(resolve, reject){
+    
+    console.log("Promise pending hain....");
+
+    let result = true;
+
+    setTimeout(() => {
+        if(result){
+            console.log('value true')
+            resolve()
+        } else {
+            console.log('value false')
+            reject()
+        }
+    }, 3000);
+})
+
+
+p1.then(function(){
+    console.log('Promise is fulfilled')
+})
+
+.catch(function(){
+    console.log('Promise is rejected')
+})
+
+.finally(function(){
+    console.log('Promise end')
+})
+
+
+
+function orderFood(){
+
+    let myOrder = new Promise(function(resolve, reject){
+
+        console.log("your order is coming");
+
+        let orderStatus = true;
+
+
+        setTimeout(() => {
+            if(orderStatus){
+                console.log('Delivery partner is arrived')
+                resolve()
+            } else {
+                console.log('condition false hain')
+                reject()
+            }
+        }, 1000);
+    })
+
+    myOrder.then(function(){
+        console.log("make payment")
+        
+        let paymentStatus = false;
+
+        setTimeout(() => {
+            if(paymentStatus){
+                console.log("Payment done");
+                
+            } else {
+                console.log("Payment failed")
+                
+            }
+        }, 1000);
+    })
+    .then(function(){
+        console.log('Enjoy your food')
+    })
+
+    .catch(function(){
+        console.log("Order failed, make a complaint ")
+    })
+
+}
+
+orderFood()
+
+
+
