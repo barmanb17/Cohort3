@@ -884,21 +884,116 @@
 
 
 
-let count = 5
- const int = setInterval(() => {
-    console.log(count)
-    count--
-    if(count == 0){
-    clearInterval(int)
+// let count = 5
+//  const int = setInterval(() => {
+//     console.log(count)
+//     count--
+//     if(count == 0){
+//     clearInterval(int)
 
-        console.log("done")
-    }
-
-
-}, 1000);
+//         console.log("done")
+//     }
 
 
+// }, 1000);
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+//DOM
+
+
+// const bulb = document.querySelector(".bulb");
+// const btn = document.querySelector("button");
+
+// let flag = true;
+
+// btn.addEventListener("click", function(){
+//     if(flag){
+//         bulb.style.backgroundColor = "yellow";
+//         btn.textContent = "Off";
+//         flag = false;
+//     } else {
+//         bulb.style.backgroundColor = "transparent";
+//         btn.textContent = "On"
+//         flag= true;
+//     }
+// })
+
+
+
+// const bulb = document.querySelector(".bulb");
+// const btn = document.querySelector("button");
+
+
+// btn.addEventListener("click", function(){
+//     if(bulb.classList.toggle("lightUp")){
+//         btn.textContent = "Off"
+//     } else {
+//         btn.textContent = "On"
+//     }
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//attributes and properties
+//-setAttribute("attribute name","value"), getAttribute("attribute name"), removeAttribute("attribute name"), hasAttribute("attribute name");
+//with data -> name
+
+//attribute v/s propeties
+// attributes- predefined keywords in html eg-(id, class, src, alt, input(type, placeholder)) -they are static
+
+//properties- property of attribute eg: id= "123"- here 123 is the property fo id
+
+
+const h1 = document.querySelector("#bij")
+
+let at = h1.getAttribute("class")
+
+
+h1.setAttribute("width", "200")
+
+
+console.log(at)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//creating inserting and removing elements from dom
