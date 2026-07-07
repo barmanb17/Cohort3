@@ -967,15 +967,15 @@
 //properties- property of attribute eg: id= "123"- here 123 is the property fo id
 
 
-const h1 = document.querySelector("#bij")
+// const h1 = document.querySelector("#bij")
 
-let at = h1.getAttribute("class")
-
-
-h1.setAttribute("width", "200")
+// let at = h1.getAttribute("class")
 
 
-console.log(at)
+// h1.setAttribute("width", "200")
+
+
+// console.log(at)
 
 
 
