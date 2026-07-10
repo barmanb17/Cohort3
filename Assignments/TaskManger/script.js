@@ -77,8 +77,7 @@ function saveTasks() {
 }
 
 function loadTasks() {
-    tasks = JSON.parse(localStorage.getItem("tasks"))
-    if(!tasks) return
+    tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
     tasks.forEach((task) => {
         createTask(task);
