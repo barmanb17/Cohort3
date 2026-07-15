@@ -1,10 +1,12 @@
 import React from 'react'
 
-const Button = (props) => {
+const Button = ({children, ...rest}) => {
   return (
-    <div>
-        {props.primary? "Primary Login" : "Secondary LOgin"}
-    </div>
+    <>
+    <button {...rest}>
+        {children}
+    </button>
+    </>
   )
 }
 
