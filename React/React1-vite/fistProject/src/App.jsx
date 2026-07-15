@@ -1,27 +1,13 @@
 import React from 'react'
+import Dashboard from './Dashboard';
 
 const App = () => {
-    const products = [
-  {
-    id: 1,
-    title: "Laptop",
-    price: 80000,
-  },
-  {
-    id: 2,
-    title: "Phone",
-    price: 30000,
-  },
-  {
-    id: 3,
-    title: "Keyboard",
-    price: 2500,
-  },
-];
+  const username = "Bijoy";
   return (
     <div>
-<ProductList products={products} />
+      <Dashboard username={username} />
     </div>
   )
 }
+
 export default App
