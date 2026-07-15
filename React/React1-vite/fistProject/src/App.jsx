@@ -1,13 +1,10 @@
 import React from 'react'
-import Student from './Student'
 
 const App = () => {
   return (
     <div>
-      <Student
+      <Employee
       name="Bijoy"
-      age={25}
-      isPlaced={true}
       />
     </div>
   )
