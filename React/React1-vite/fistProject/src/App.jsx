@@ -1,20 +1,27 @@
 import React from 'react'
 
 const App = () => {
-  const employee = {
-  name: "Bijoy",
-  company: {
-    name: "Google",
-    location: {
-      city: "Bangalore",
-      state: "Karnataka",
-      pincode: 560001,
-    },
+    const products = [
+  {
+    id: 1,
+    title: "Laptop",
+    price: 80000,
   },
-};
+  {
+    id: 2,
+    title: "Phone",
+    price: 30000,
+  },
+  {
+    id: 3,
+    title: "Keyboard",
+    price: 2500,
+  },
+];
   return (
-    <Employee employee={employee} />
+    <div>
+<ProductList products={products} />
+    </div>
   )
 }
-
 export default App
