@@ -1,11 +1,16 @@
 import React from 'react'
 import Dashboard from './Dashboard';
+import Card from './Card';
 
 const App = () => {
-  const username = "Bijoy";
+
   return (
     <div>
-      <Dashboard username={username} />
+      <Card
+      title="React Mastery"
+      subtitle="Props & State"
+      icon={<h1>🚀</h1>}
+      />
     </div>
   )
 }
