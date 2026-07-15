@@ -1,10 +1,11 @@
 import React from 'react'
 import Counter from './Counter'
+import Fruits from './Fruits'
 
 const App = () => {
   return (
     <div>
-      <Counter />
+      <Fruits/>
     </div>
   )
 }
