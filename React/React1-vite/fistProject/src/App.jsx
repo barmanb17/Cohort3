@@ -1,5 +1,16 @@
+import React from 'react'
+import Student from './Student'
+
 const App = () => {
-  return "hello";
+  return (
+    <div>
+      <Student
+      name="Bijoy"
+      age={25}
+      isPlaced={true}
+      />
+    </div>
+  )
 }
 
-export default App;
+export default App
