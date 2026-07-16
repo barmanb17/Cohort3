@@ -1,11 +1,28 @@
 import React from 'react'
 
-const User = (props) => {
+const User = () => {
+  const users = [
+  {
+    id: 1,
+    name: "Rahul",
+    age: 22
+  },
+  {
+    id: 2,
+    name: "Amit",
+    age: 25
+  },
+  {
+    id: 3,
+    name: "Priya",
+    age: 21
+  }
+];
   return (
     <div>
-        <h2>Name: {props.user.name}</h2>
-        <h2>Profession: {props.user.prodession}</h2>
-        <h2>Experience:{props.user.experience} years</h2>
+      {users.map(users => (
+        <h1 key={users.id}>{users.name} {users.age}</h1>
+      ))}
     </div>
   )
 }
